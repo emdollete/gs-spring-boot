@@ -5,10 +5,10 @@ node {
 	  stage('build') {
 	   sh '''
 	   cd initial
-	   mvn clean install package -DskipTests
+	   mvn clean package -DskipTests
 	   cd target
 	   cp ../src/main/resources/web.config web.config
-	   cp todo-app-java-on-azure-1.0-SNAPSHOT.jar app.jar 
+	   cp gs-spring-boot-0.1.0.jar app.jar 
 	   zip todo.zip app.jar web.config
 								        '''
 	}
