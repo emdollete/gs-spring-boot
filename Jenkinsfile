@@ -4,6 +4,7 @@ node {
 	}
 	  stage('build') {
 	   sh '''
+	   apt-get update && apt-get install zip
 	   cd complete
 	   mvn clean package -DskipTests
 	   cd target
